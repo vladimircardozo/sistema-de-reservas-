@@ -1,6 +1,10 @@
 import express from "express"
-import turnosRouter from './api/turnos.api';
+import apiRouter from "./api/app.api"
 
 const app = express()
 
-app.use("/api/turnos", turnosRouter)
+console.log("Configurando rutas...");
+
+app.use("/api", apiRouter)
+
+export default app;

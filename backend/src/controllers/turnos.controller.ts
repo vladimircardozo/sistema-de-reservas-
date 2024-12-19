@@ -34,6 +34,7 @@ export const updateTurno = async (req: Request, res: Response) => {
     try {
         const updatedTurno = await Turno.findByIdAndUpdate(req.params.id, req.body, { new: true });
         // if (!updatedTurno) return res.status(404).json({ message: "Turno no encontrado"});
+        res.status(200).json(updatedTurno);
     } catch (error) {
         res.status(400).json({ message: (error as Error).message });
     }
@@ -43,7 +44,7 @@ export const deleteTurno = async (req: Request, res: Response) => {
     try {
         const deletedTurno = await Turno.findByIdAndDelete(req.params.id);
         // if (!deletedTurno) return res.status(404).json({ message: "Turno no encontrado"});
-        res.status(200).json({ message: "Turno eliminado correctamente" });
+        res.status(200).json(deletedTurno);
     } catch (error) {
         res.status(500).json({ message: (error as Error).message });
     }
