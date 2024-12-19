@@ -4,12 +4,14 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const index = express();
+const app = express();
 const port = process.env.PORT;
+
+app.use(express.json())
 
 connectDB()
 .then(() => {
-    index.listen(port, () => {
+    app.listen(port, () => {
         console.log(`Servidor escuchado en el puerto ${port}`);
     });
 })
