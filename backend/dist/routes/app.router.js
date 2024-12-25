@@ -6,6 +6,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app_api_1 = __importDefault(require("./api/app.api"));
 const app = (0, express_1.default)();
-console.log("Configurando rutas...");
 app.use("/api", app_api_1.default);
 exports.default = app;

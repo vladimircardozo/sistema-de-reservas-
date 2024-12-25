@@ -12,7 +12,6 @@ const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
-console.log("Servidor en ejecución...");
 app.use("/", app_router_1.default);
 (0, db_1.default)()
     .then(() => {

@@ -11,8 +11,6 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-console.log("Servidor en ejecución...");
-
 app.use("/", appRouter);
 
 connectDB()

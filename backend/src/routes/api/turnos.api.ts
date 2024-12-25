@@ -7,12 +7,12 @@ import {
     deleteTurno
 } from "../../controllers/turnos.controller";
 
-const router = express.Router();
+const turnosRouter  = express.Router();
 
-router.post("/", createTurno); 
-router.get("/", getAllTurnos);
-router.get("/:id", getTurnoById);
-router.put("/:id", updateTurno);
-router.delete("/:id", deleteTurno);
+turnosRouter .post("/", createTurno); 
+turnosRouter .get("/", getAllTurnos);
+turnosRouter .get("/:id", getTurnoById);
+turnosRouter .put("/:id", updateTurno);
+turnosRouter .delete("/:id", deleteTurno);
 
-export default router;
+export default turnosRouter ;
